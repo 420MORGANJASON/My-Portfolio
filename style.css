@@ -145,7 +145,10 @@ footer {
     /* ... your existing styles ... */
     font-size: 30px;
 }
-
+.night-mode {
+    background-color: #333;
+    color: #fff;
+}
 body.night-mode {
     background-color: black;
     color: black;

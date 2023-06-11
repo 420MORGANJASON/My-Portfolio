@@ -7,13 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    
+
 </head>
 
 <body>
     <button id="toggleModeBtn">Toggle Dark Mode</button>
     <h1>Morgan Jason</h1>
-    <h2><marquee>Full-stack web developer</marquee></h2>
+    <h2>
+        <marquee>Full-stack web developer</marquee>
+    </h2>
     <div class="navbar">
         <nav>
             <a href="#ABOUT">ABOUT</a>
@@ -25,7 +27,7 @@
     <div class="image-container">
         <img src="IMG20220909152723.jpg" alt="Profile Image">
     </div>
-    <div>
+    <div id="ABOUT">
         <h2>ABOUT ME</h2>
         <p>I am Morgan Jason, a highly skilled software developer with 1 year of experience. I specialize in designing
             and
@@ -38,9 +40,8 @@
             possess strong problem-solving and communication skills. I am eager to contribute my technical proficiency
             and drive for
             excellence to make a significant impact in your organization.</p>
-
     </div>
-    <div>
+    <div id="MY-PROJECTS">
         <h2>MY PROJECTS</h2>
         <p>Welcome to my portfolio! I am a passionate full-stack developer with a strong focus on creating innovative
             and impactful
@@ -53,25 +54,25 @@
     </div>
     <footer>
         <div class="footer-container">
-            <div class="contact-form">
+            <div id="CONTACT" class="contact-form">
                 <h2>REACH ME ON::</h2>
                 <form id="contactForm">
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="name" required>
-            
+
                     <label for="email">Email:</label>
                     <input type="email" id="email" name="email" required>
-            
+
                     <input type="submit" value="Send Message">
                 </form>
-            
+
                 <div class="contact-info">
                     <p>Location: Nairobi, Kenya</p>
                     <p>Phone: +254 745750096</p>
                     <p>Email: 420morganjason@gmail.com</p>
                 </div>
             </div>
-            </div>
+        </div>
         </div>
     </footer>
     <script src="script.js"></script>

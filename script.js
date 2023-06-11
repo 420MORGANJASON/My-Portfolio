@@ -1,49 +1,46 @@
 // Smooth scrolling
 const navLinks = document.querySelectorAll('nav a');
-document.getElementById("contactForm").addEventListener("submit", function (e) {
+const contactForm = document.getElementById("contactForm");
+const toggleModeBtn = document.getElementById('toggleModeBtn');
+const body = document.body;
+
+
+function submitContactForm(e) {
     e.preventDefault();
 
     let name = document.getElementById("name").value;
     let email = document.getElementById("email").value;
-    let subject = "New Message from Portfolio Contact Form";
-    let body = "Name: " + name + "\nEmail: " + email;
 
-    let mailtoLink = "mailto:420morganjason@gmail.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
-
-    // Open the email client or show a prompt for email if not supported
-    if (navigator.userAgent.toLowerCase().indexOf('chrome') > -1) {
-        window.location.href = mailtoLink;
-    } else {
-        alert("Please send an email to 420morganjason@gmail.com or call +254 745750096");
-    }
+    // Display alert with contact information
+    alert("Call Morgan: +254 745750096 or Email Morgan: 420morganjason@gmail.com");
 
     // Reset the form fields after submitting
-    document.getElementById("contactForm").reset();
-});
+    contactForm.reset();
+}
 
 
-navLinks.forEach(link => {
-link.addEventListener('click', e => {
+function scrollToSection(e) {
     e.preventDefault();
 
     const target = document.querySelector(e.target.hash);
     window.scrollTo({
-    top: target.offsetTop,
-    behavior: 'smooth'
+        top: target.offsetTop,
+        behavior: 'smooth'
     });
-});
-});
+}
+
 function toggleNightMode() {
-            var body = document.body;
-            var isNightMode = body.classList.contains('night-mode');
+    const isNightMode = body.classList.contains('night-mode');
 
-            if (isNightMode) {
-                body.classList.remove('night-mode');
-                document.getElementById('toggleModeBtn').textContent = 'Toggle Dark Mode';
-            } else {
-                body.classList.add('night-mode');
-                document.getElementById('toggleModeBtn').textContent = 'Toggle Light Mode';
-            }
-        }
+    if (isNightMode) {
+        body.classList.remove('night-mode');
+        toggleModeBtn.textContent = 'Toggle Dark Mode';
+    } else {
+        body.classList.add('night-mode');
+        toggleModeBtn.textContent = 'Toggle Light Mode';
+    }
+}
 
-        document.getElementById('toggleModeBtn').addEventListener('click', toggleNightMode);
+contactForm.addEventListener("submit", submitContactForm);
+navLinks.forEach(link => link.addEventListener('click', scrollToSection));
+toggleModeBtn.addEventListener('click', toggleNightMode);
