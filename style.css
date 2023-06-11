@@ -84,7 +84,8 @@ footer {
 
 .contact-form {
     /* ... your existing styles ... */
-    background-color: #dee2e6;
+    background-color: #000;
+    color: #fff;
     padding: 40px;
     text-align: center;
     width: 70%;
@@ -124,8 +125,8 @@ footer {
     font-size: 16px;
     padding: 10px 20px;
     cursor: pointer;
-    background-color: #3f51b5;
-    color: #dee2e6;
+    background-color: grey;
+    color: black;
     border: none;
 }
 
@@ -145,7 +146,21 @@ footer {
     font-size: 30px;
 }
 
- /* Mobile Styles */
+body.night-mode {
+    background-color: black;
+    color: black;
+}
+body.night-mode h1,
+body.night-mode h2,
+body.night-mode p,
+body.night-mode a {
+    color: white;
+}
+body.night-mode .navbar a {
+    color: black;
+    border: 1px solid black;
+}
+/* Mobile Styles */
         @media (max-width: 768px) {
             /* Adjust the styles as per your design requirements */
             h1 {
@@ -166,3 +181,15 @@ footer {
                 height: auto;
             }
         }
+
+.toggle-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #000;
+}
+
+.toggle-button.active {
+    color: #fff;
+}

@@ -23,15 +23,27 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
 
 
 navLinks.forEach(link => {
-  link.addEventListener('click', e => {
+link.addEventListener('click', e => {
     e.preventDefault();
 
     const target = document.querySelector(e.target.hash);
     window.scrollTo({
-      top: target.offsetTop,
-      behavior: 'smooth'
+    top: target.offsetTop,
+    behavior: 'smooth'
     });
-  });
 });
+});
+function toggleNightMode() {
+            var body = document.body;
+            var isNightMode = body.classList.contains('night-mode');
 
+            if (isNightMode) {
+                body.classList.remove('night-mode');
+                document.getElementById('toggleModeBtn').textContent = 'Toggle Dark Mode';
+            } else {
+                body.classList.add('night-mode');
+                document.getElementById('toggleModeBtn').textContent = 'Toggle Light Mode';
+            }
+        }
 
+        document.getElementById('toggleModeBtn').addEventListener('click', toggleNightMode);
