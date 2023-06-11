@@ -84,7 +84,7 @@ footer {
 
 .contact-form {
     /* ... your existing styles ... */
-    background-color: #000;
+    background-color: grey;
     color: #fff;
     padding: 40px;
     text-align: center;
@@ -125,7 +125,7 @@ footer {
     font-size: 16px;
     padding: 10px 20px;
     cursor: pointer;
-    background-color: grey;
+    background-color: white;
     color: black;
     border: none;
 }
