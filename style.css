@@ -8,6 +8,9 @@ header {
     padding: 20px;
     text-align: center;
 }
+marquee{
+    background-color: #fff;
+}
 
 h1 {
     font-size: 50px;
@@ -38,7 +41,7 @@ marquee{
     display: flex;
     text-align: right;
     justify-content: right;
-    background-color: #fefae0;
+    /* background-color: #fefae0; */
     padding: 40px 20px;
     border-top: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
@@ -54,6 +57,7 @@ nav a {
     font-size: 20px;
     text-decoration: none;
     color: black;
+    background-color: #fefae0;
     padding: 5px 10px;
     border: 1px solid transparent;
     transition: border-color 0.3s ease;
@@ -96,21 +100,20 @@ p {
     justify-content: left;
     
 }
-
 footer {
-    background-color: #faedcd;
+    background-color: var(--footer-background);
     padding: 50px;
     text-align: center;
+    color: var(--footer-text-color);
 }
-/* ... your existing styles ... */
 
 .footer-container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    color: var(--footer-text-color);
 }
-
 .contact-form {
     /* ... your existing styles ... */
     background-color: grey;
@@ -261,6 +264,7 @@ body.night-mode .navbar a {
 #My-Projects {
     display: flex;
     flex-direction: column;
+    background-color: #f8edeb;
     align-items: center;
     justify-content: center;
     /* Add this line */
@@ -293,8 +297,10 @@ body.night-mode .navbar a {
 
 .card {
     position: relative;
-    width: 300px;
-    height: 200px;
+    width: 500px;
+    /* Increase the width */
+    height: 500px;
+    /* Increase the height */
     overflow: hidden;
 }
 .card img {
