@@ -1,5 +1,5 @@
 body {
-    background-color: #fff;
+    background-color: #faedcd;
     margin: 0;
     padding: 0;
 }
@@ -20,15 +20,33 @@ h2 {
     text-align: center;
     margin-bottom: 20px;
 }
+marquee{
+    font-size: 70px;
+    width: 600px;
+    height: 70px;
+    background-color: e9edc9;
+    color: black;
+    font-family: Arial, sans-serif;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    text-align: center;
+}
 
 .navbar {
     display: flex;
-    text-align: center;
-    justify-content: center;
-    background-color: #dee2e6;
-    padding: 10px;
+    text-align: right;
+    justify-content: right;
+    background-color: #fefae0;
+    padding: 40px 20px;
     border-top: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
+}
+.name{
+    display: flex;
+    text-align: left;
+    justify-content: left;
 }
 
 nav a {
@@ -45,31 +63,42 @@ nav a:hover {
     border-color: #000;
 }
 
-.image-container {
-    float: right;
-    width: 55%;
-    max-width: 100%;
-    height: auto;
+/* .image-container {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
     overflow-x: auto;
     overflow-y: hidden;
-}
+} */
 
 section {
     padding: 50px;
     background-color: #dee2e6;
 }
 
+.project {
+    margin-top: 20px;
+}
 h2 {
     font-size: 30px;
 }
 
 p {
-    font-size: 20px;
+    font-size: 30px;
     line-height: 1.5;
+    display: flex;
+    text-align: center;
+    justify-content: left;
+    
 }
 
 footer {
-    background-color: #fff;
+    background-color: #faedcd;
     padding: 50px;
     text-align: center;
 }
@@ -185,6 +214,19 @@ body.night-mode .navbar a {
             }
         }
 
+#toggleModeBtn{
+    background-color: #ff96ad;
+    border: 1px solid white;
+    padding: 10px 20px;
+    color: black;
+    font-size: 16px;
+}
+#toggleModeBtn:hover{
+    background: #ff96ad;
+    box-shadow: 0 0 5px #ff96ad, 0 0 25px
+    #ff96ad, 0 0 50px #ff96ad, 0 0 200px #ff96ad;
+    
+}
 .toggle-button {
     background: none;
     border: none;
@@ -193,6 +235,110 @@ body.night-mode .navbar a {
     color: #000;
 }
 
+
 .toggle-button.active {
     color: #fff;
+}
+#ABOUT {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
+    margin: 0 auto;
+    max-width: 800px;
+    margin-bottom: 50px;
+    /* Added margin-bottom to create space between sections */
+}
+#para{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
+    margin: 0 auto;
+    max-width: 800px;
+    margin-bottom: 50px;
+}
+#My-Projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* Add this line */
+    padding: 0 60px;
+    margin: 0 auto;
+    max-width: 1000px;
+    height: 00px;
+}
+/* a {
+    color: blue;
+    text-decoration: none;
+} */
+
+/* a:hover {
+    text-decoration: underline;
+} */
+#card-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 20px;
+    align-items: center;
+    justify-content: flex-start;
+    /* Align cards to the left */
+    height: 100vh;
+    width: 150vh;
+    padding-left: 500px;
+    /* Add padding to create space */
+}
+
+.card {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+}
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s;
+}
+
+.card:hover img {
+    opacity: 0.8;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.card:hover .overlay {
+    opacity: 1;
+}
+
+.overlay h3 {
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.overlay a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.overlay a:hover {
+    text-decoration: underline;
 }
