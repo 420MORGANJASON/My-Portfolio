@@ -540,3 +540,58 @@
     filter: saturate(200%);
     animation: animate 4s linear infinite;
 }
+/* Add responsiveness for smaller screens */
+@media only screen and (max-width: 767px) {
+    .hero {
+        height: 80vh; /* Adjust hero height for smaller screens */
+    }
+
+    nav {
+        padding: 10px; /* Reduce padding for navigation on smaller screens */
+    }
+
+    .content {
+        top: 50%; /* Adjust content positioning */
+        left: 0;
+        flex-direction: column; /* Stack content on smaller screens */
+        text-align: center; /* Center-align content on smaller screens */
+    }
+
+    .content-left, .content-right {
+        width: 100%; /* Full width for content sections on smaller screens */
+        text-align: center; /* Center-align text */
+    }
+
+    .content h1 {
+        font-size: 36px; /* Reduce the font size of the main heading */
+    }
+
+    .content p {
+        width: 80%; /* Wider text container for readability */
+        font-size: 16px; /* Adjust font size for paragraphs */
+    }
+
+    .imgbox img {
+        width: 80%; /* Adjust image size for smaller screens */
+        max-width: none;
+        top: 0; /* Remove animation for small screens */
+        right: 0;
+        animation: none;
+    }
+
+    .About {
+        top: 150%; /* Adjust section position */
+    }
+}
+
+/* Add responsiveness for even smaller screens */
+@media only screen and (max-width: 479px) {
+    .content h1 {
+        font-size: 24px; /* Further reduce font size for smaller screens */
+    }
+
+    .content p {
+        width: 100%; /* Full width for paragraphs on very small screens */
+        font-size: 14px; /* Further reduce font size for paragraphs */
+    }
+}
