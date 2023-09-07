@@ -407,3 +407,16 @@
             text-decoration: none;
             border-radius: 5px;
         }
+
+        /* Add responsiveness for the paragraph on smaller screens */
+.responsive-paragraph {
+    font-size: 16px; /* Adjust the font size for smaller screens */
+    line-height: 1.4; /* Adjust the line spacing for readability */
+}
+
+/* Add responsiveness for even smaller screens if needed */
+@media only screen and (max-width: 479px) {
+    .responsive-paragraph {
+        font-size: 14px; /* Further reduce font size for very small screens */
+    }
+}
