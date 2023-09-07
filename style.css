@@ -408,15 +408,28 @@
             border-radius: 5px;
         }
 
-        /* Add responsiveness for the paragraph on smaller screens */
-.responsive-paragraph {
-    font-size: 16px; /* Adjust the font size for smaller screens */
-    line-height: 1.4; /* Adjust the line spacing for readability */
-}
+        .responsive-paragraph{
+          position: relative;
+        }
 
-/* Add responsiveness for even smaller screens if needed */
-@media only screen and (max-width: 479px) {
-    .responsive-paragraph {
-        font-size: 14px; /* Further reduce font size for very small screens */
-    }
-}
+        /* Add responsiveness for the paragraph container */
+        .paragraph-container {
+            max-width: 100%; /* Limit the maximum width */
+            padding: 10px; /* Add some padding for spacing */
+            box-sizing: border-box; /* Ensure padding doesn't exceed the width */
+        }
+
+        /* Style the paragraph */
+        .responsive-paragraph {
+            font-size: 16px; /* Adjust the font size for smaller screens */
+            line-height: 1.4; /* Adjust the line spacing for readability */
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Add responsiveness for even smaller screens if needed */
+        @media only screen and (max-width: 479px) {
+            .responsive-paragraph {
+                font-size: 14px; /* Further reduce font size for very small screens */
+            }
+        }
