@@ -375,7 +375,7 @@
 
 
 
-  .container {
+  #container {
             display: flex;
             margin-bottom: 20px;
             width: 1800px; /* Adjust the width of each container as needed */
