@@ -216,7 +216,7 @@
     .About {
     position: relative;
     font-size: 20px;
-    top: 100%;
+    top: 180%;
     left: 8%;
     }
     .About .title {
@@ -243,9 +243,7 @@
     text-transform: inherit;
     width: 70%;
     }
-    .About h1 span {
-    color: #fd4766;
-    }
+
     .About p {
     width: 55%;
     color: #202020;
