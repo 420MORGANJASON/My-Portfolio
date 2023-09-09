@@ -160,6 +160,7 @@
     width: 120%; /* Adjust the width as needed */
     height: 150%;
     font-size: 20px;
+    top: 200%;
     padding: 15%;
 }
 
@@ -217,8 +218,11 @@
     .About {
     position: relative;
     font-size: 20px;
-    top: 150%;
+    top: 180%;
     left: 8%;
+    }
+    .paragraph-container{
+      top: 200%;
     }
     .About .title {
     color: #0a0a0a;
