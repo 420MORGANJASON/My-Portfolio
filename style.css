@@ -88,7 +88,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 30px 100px;
-    position: fixed;
+    position: relative;
     top: 0;
     left: 0;
     width: 100%;
@@ -129,6 +129,7 @@
     font-size: 16px;
     text-transform: uppercase;
     letter-spacing: 2px;
+    top: 100%;
     padding: 16px 40px;
     border-radius: 1500px;
     display: inline-block;
@@ -216,7 +217,7 @@
     .About {
     position: relative;
     font-size: 20px;
-    top: 180%;
+    top: 150%;
     left: 8%;
     }
     .About .title {
