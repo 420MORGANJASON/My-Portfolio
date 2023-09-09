@@ -52,6 +52,8 @@
   .About {
     top: 150%; /* Adjust section position */
   }
+
+
 }
 
 /* Add responsiveness for even smaller screens */
@@ -64,6 +66,7 @@
     width: 100%; /* Full width for paragraphs on very small screens */
     font-size: 14px; /* Further reduce font size for paragraphs */
   }
+
 }
 
 /* Rest of your CSS code goes here */
@@ -373,63 +376,51 @@
   background-color: #4c49ea;
 }
 
+  
+.product-details {
+    flex: 1;
+    padding: 10px; /* Reduce padding for the product details */
+}
 
+.product-image {
+    flex: 1;
+    max-width: 1000px;
+    padding: 10px; /* Reduce padding for the product image */
+}
 
-  .container {
-            display: flex;
-            margin-bottom: 20px;
-            width: 1800px; /* Adjust the width of each container as needed */
-            height: 100%;
-        }
+.product-image img {
+    width: 60%;
+    height: auto;
+}
 
-        .product-details {
-            flex: 1;
-            padding: 10px; /* Reduce padding for the product details */
-        }
+.button {
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+    background-color: #fd4766;
+    color: #fff;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 5px;
+}
 
-        .product-image {
-            flex: 1;
-            padding: 10px; /* Reduce padding for the product image */
-        }
-
-        .product-image img {
-            width: 100%;
-            height: auto;
-        }
-
-        .button {
-            display: block;
-            margin-top: 10px;
-            text-align: center;
-            background-color: #fd4766;
-            color: #fff;
-            padding: 5px 10px;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-
-        .responsive-paragraph{
-          position: relative;
-        }
-
-        /* Add responsiveness for the paragraph container */
-        .paragraph-container {
-            max-width: 100%; /* Limit the maximum width */
-            padding: 10px; /* Add some padding for spacing */
-            box-sizing: border-box; /* Ensure padding doesn't exceed the width */
-        }
-
-        /* Style the paragraph */
-        .responsive-paragraph {
-            font-size: 16px; /* Adjust the font size for smaller screens */
-            line-height: 1.4; /* Adjust the line spacing for readability */
-            margin: 0;
-            padding: 0;
-        }
-
-        /* Add responsiveness for even smaller screens if needed */
-        @media only screen and (max-width: 479px) {
-            .responsive-paragraph {
-                font-size: 14px; /* Further reduce font size for very small screens */
-            }
-        }
+.responsive-paragraph {
+    font-size: 16px;
+    line-height: 1.5;
+    max-height: 100%;
+}
+h4{
+  font-size: 8px;
+}
+/* Media query for screens with a max-width of 768px (typical tablet size) */
+@media (max-width: 768px) {
+    .responsive-paragraph {
+        font-size: 14px; /* Decrease font size for smaller screens */
+    }
+}
+/* Media query for screens with a max-width of 480px (typical mobile size) */
+@media (max-width: 480px) {
+    .responsive-paragraph {
+        font-size: 12px; /* Further decrease font size for mobile screens */
+    }
+}
